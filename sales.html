@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHFY - Enterprise Sales</title>
+    <meta name="description" content="MECHFY CLIX - Contact our Sales Team for Enterprise Solutions.">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in-page">
+    <div class="cyber-grid"></div>
+    <div class="background-glow"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                MECHFY
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="product.html" class="nav-link">Product</a></li>
+                <li><a href="technology.html" class="nav-link">Technology</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-contact">Command Center</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content standalone-page">
+        <section id="sales" class="section-container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">ENTERPRISE SOLUTIONS</h2>
+                <div class="title-underline"></div>
+                <p class="hero-subtitle" style="margin: 20px auto 0; text-align: center;">Upgrade your safety infrastructure with the MECHFY CLIX ecosystem. Contact our sales team for bulk deployments and custom integrations.</p>
+            </div>
+
+            <div class="command-center-container fade-in-up delay-1">
+                <!-- Left Panel -->
+                <div class="info-panel glass-card tech-border">
+                    <div class="panel-header">
+                        <div class="card-icon shield-icon" style="width: 24px; height: 24px; border-radius: 50%; box-shadow: 0 0 10px var(--neon-cyan);"></div>
+                        <h2 class="panel-title" style="font-size: 1.5rem; margin-left: 10px;">ENTERPRISE BENEFITS</h2>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <ul class="tech-list">
+                            <li><strong>Priority Support 24/7</strong><br><span style="font-size: 0.85rem; color: var(--text-muted);">Direct line to our technical command center for immediate assistance.</span></li>
+                            <li><strong>Custom Dashboard Integration</strong><br><span style="font-size: 0.85rem; color: var(--text-muted);">Seamless connection with your existing enterprise systems.</span></li>
+                            <li><strong>Volume Discounts</strong><br><span style="font-size: 0.85rem; color: var(--text-muted);">Scalable pricing models for large workforce deployments.</span></li>
+                            <li><strong>On-site Training</strong><br><span style="font-size: 0.85rem; color: var(--text-muted);">Comprehensive workshops for your safety officers and crew.</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="contact-section">
+                        <h4 class="neon-text">DIRECT SALES INQUIRY</h4>
+                        <p class="data-value"><a href="mailto:mechfy.clix@gmail.com" class="link-hover">mechfy.clix@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Right Panel -->
+                <div class="form-panel glass-card tech-border">
+                    <div class="form-header">
+                        <h3>REQUEST A QUOTE</h3>
+                        <div class="status-indicator">SALES CHANNEL OPEN</div>
+                    </div>
+                    
+                    <form id="sales-form" class="cyber-form">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Enterprise Sales Inquiry - MECHFY CLIX">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="input-group">
+                            <label for="sales-name">FULL NAME</label>
+                            <input type="text" id="sales-name" name="Full Name" placeholder="John Doe" required>
+                            <div class="input-focus-border"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sales-company">COMPANY NAME</label>
+                            <input type="text" id="sales-company" name="Company Name" placeholder="Acme Industries" required>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sales-email">WORK EMAIL</label>
+                            <input type="email" id="sales-email" name="email" placeholder="john@acme.com" required>
+                            <div class="input-focus-border"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sales-units">ESTIMATED UNITS REQUIRED</label>
+                            <input type="number" id="sales-units" name="Estimated Units Required" placeholder="e.g. 50" min="1" required>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sales-message">DEPLOYMENT DETAILS</label>
+                            <textarea id="sales-message" name="Deployment Details" rows="4" placeholder="Tell us about your workforce size and specific hazards..." required></textarea>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary submit-btn" style="width: 100%;">
+                                <span class="btn-text">Submit Request</span>
+                                <span class="btn-icon">➔</span>
+                            </button>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <span class="system-msg" id="sales-form-msg"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MECHFY SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 MECHFY. ALL SYSTEMS OPERATIONAL.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

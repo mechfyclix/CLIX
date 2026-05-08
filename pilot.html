@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIX Pilot Project Inquiry Form</title>
+    <meta name="description" content="Request a demo or pilot project for the CLIX smart safety helmet system.">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in-page">
+    <div class="cyber-grid"></div>
+    <div class="background-glow"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                MECHFY
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="product.html" class="nav-link">Product</a></li>
+                <li><a href="technology.html" class="nav-link">Technology</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-contact">Command Center</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content standalone-page">
+        <section class="section-container" style="max-width: 800px; padding-top: 50px;">
+            <div class="industrial-form-wrapper fade-in-up">
+                
+                <div class="industrial-header">
+                    <div class="safety-stripe"></div>
+                    <h1 class="industrial-title">CLIX Pilot Project Inquiry Form</h1>
+                    <p class="industrial-subtitle">Fill out this form to request a demo or pilot project for the CLIX smart safety helmet system. Our team will contact you within 24 hours.</p>
+                </div>
+
+                <form action="https://formsubmit.co/contact@clix.id" method="POST" class="industrial-form">
+                    
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New CLIX Lead">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- URL must be absolute for _next, but for testing locally we can't use local file path. 
+                         If deployed, it should point to the hosted thank-you.html. We'll leave it as relative, though FormSubmit prefers absolute. 
+                         Actually, we can use JS to set it or just let FormSubmit use its default if relative fails. -->
+                    <input type="hidden" name="_next" id="next-url" value="">
+                    
+                    <!-- Autoresponse config -->
+                    <input type="hidden" name="_autoresponse" value="Hi {Full Name}, Thank you for reaching out to CLIX. We have received your inquiry and our team will get back to you within 24 hours. Best regards, CLIX Team">
+                    
+                    <!-- Webhook for Google Sheets (Zapier/Make) - user to configure -->
+                    <!-- <input type="hidden" name="_webhook" value="YOUR_ZAPIER_WEBHOOK_URL"> -->
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="full-name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="full-name" name="Full Name" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="company-name">Company Name <span class="required">*</span></label>
+                            <input type="text" id="company-name" name="Company Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">Industry <span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select id="industry" name="Industry" required>
+                                <option value="" disabled selected>Select your industry</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Mining">Mining</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Oil & Gas">Oil & Gas</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message / Inquiry <span class="required">*</span></label>
+                        <textarea id="message" name="Message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-actions-industrial">
+                        <button type="submit" class="btn-industrial">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MECHFY SYSTEM</div>
+            <div class="footer-copy">&copy; 2026 MECHFY. ALL SYSTEMS OPERATIONAL.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set the _next url dynamically to work on any domain
+        document.addEventListener('DOMContentLoaded', () => {
+            const nextUrlInput = document.getElementById('next-url');
+            if (nextUrlInput) {
+                // Get current origin and path, replace filename with thank-you.html
+                const currentUrl = window.location.href;
+                const basePath = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+                nextUrlInput.value = basePath + '/thank-you.html';
+            }
+        });
+    </script>
+</body>
+</html>

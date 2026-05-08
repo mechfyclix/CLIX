@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIX - Technology Architecture</title>
+    <meta name="description" content="MECHFY CLIX - System Technology & Network Architecture.">
+    <!-- Using Inter and Poppins for clean, modern SaaS typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-brand-theme.css">
+</head>
+<body class="fade-in-page">
+    <div class="dark-bg-grid"></div>
+    <div class="ambient-glow-dark"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpeg" alt="MF Logo" class="brand-logo">
+                CLIX
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="product.html" class="nav-link">Product</a></li>
+                <li><a href="technology.html" class="nav-link active">Technology</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link">Command Center</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-dark btn-sm">Request Demo</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content standalone-page">
+        <section id="tech" class="section-container-dark tech-bg">
+            <div class="section-header-dark fade-in-up">
+                <h2 class="section-title-dark">Network Architecture</h2>
+                <p class="section-desc-dark">Enterprise-grade infrastructure for real-time safety monitoring.</p>
+            </div>
+            
+            <div class="tech-content glass-card-dark fade-in-up delay-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div class="tech-text">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--text-white);">Distributed IoT Monitoring</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-gray); line-height: 1.7;">The CLIX system utilizes a low-latency, high-redundancy mesh network to transmit vital statistics from the hazard zone to the secure cloud environment. Every device acts as a node, ensuring continuous connectivity even in complex industrial topologies.</p>
+                    <ul class="tech-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px; color: var(--text-gray); line-height: 1.6; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-turq);">➔</span> <strong class="text-turq">Cloud Infrastructure:</strong> Edge computing integrated with global cloud servers for real-time data processing without latency bottlenecks.</li>
+                        <li style="margin-bottom: 15px; color: var(--text-gray); line-height: 1.6; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-turq);">➔</span> <strong class="text-turq">Machine Learning:</strong> Pattern recognition deployed on fall and impact sensors to eliminate false positive SOS alerts.</li>
+                        <li style="margin-bottom: 15px; color: var(--text-gray); line-height: 1.6; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-turq);">➔</span> <strong class="text-turq">Secure Encrypted Packets:</strong> End-to-end AES-256 encryption ensuring worker location and status data remains protected.</li>
+                    </ul>
+                </div>
+                <div class="data-visualization" style="position: relative; height: 350px; display: flex; justify-content: center; align-items: center; background: rgba(10, 28, 58, 0.5); border-radius: 16px; border: 1px dashed rgba(46, 230, 184, 0.2);">
+                    <div class="data-ring ring-1" style="border-color: rgba(46, 230, 184, 0.3);"></div>
+                    <div class="data-ring ring-2" style="border-color: rgba(46, 230, 184, 0.2);"></div>
+                    <div class="data-ring ring-3" style="border-color: rgba(46, 230, 184, 0.1);"></div>
+                    <div class="core-server" style="color: var(--accent-turq); font-family: 'Poppins', sans-serif;">CLOUD CORE</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-dark">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="MF Logo" class="brand-logo"> CLIX
+                </div>
+                <p class="footer-tagline">Real-time safety monitoring that saves lives.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Contact Info</h4>
+                <p>Email: mechfy.clix@gmail.com</p>
+                <p>Bekasi, Indonesia</p>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CLIX Safety. All rights reserved. Built by President University Team.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
