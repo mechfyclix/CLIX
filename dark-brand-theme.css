@@ -29,6 +29,18 @@ body.fade-in-page {
     background-color: var(--navy-bg);
     color: var(--text-silver);
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Backgrounds */
@@ -125,6 +137,10 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a::after {
     background: var(--accent-turq);
     box-shadow: 0 0 8px var(--accent-turq);
+}
+
+.mobile-only-btn {
+    display: none;
 }
 
 /* Buttons Dark */
@@ -229,11 +245,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title-dark {
-    font-size: 3.8rem;
+    font-size: clamp(2rem, 5.5vw, 3.8rem);
     line-height: 1.15;
     font-weight: 800;
     margin-bottom: 24px;
     color: var(--text-white);
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .hero-subtitle-dark {
@@ -673,19 +691,99 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Overrides */
-@media (max-width: 992px) {
-    .hero-container-dark { grid-template-columns: 1fr; text-align: center; }
+@media (max-width: 1024px) {
+    /* Navbar Responsive */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(6, 20, 43, 0.98);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: 20px 40px;
+        border-bottom: 1px solid var(--border-glass);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        z-index: 999;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .mobile-only-btn {
+        display: block;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-actions {
+        display: none !important;
+    }
+
+    /* Layout Grids */
+    .hero-container-dark { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .hero-subtitle-dark { margin: 0 auto 30px; }
     .cta-group { justify-content: center; }
-    .features-grid-dark { grid-template-columns: repeat(2, 1fr); }
+    
+    .features-grid-dark { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .flow-container { flex-direction: column; gap: 30px; }
     .flow-connector { display: none; }
+    
     .benefits-dashboard { grid-template-columns: 1fr; grid-template-rows: auto; }
     .b-main, .b-sub1, .b-sub2, .b-sub3, .b-sub4 { grid-column: span 1; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .hero-title-dark { font-size: 3rem; }
+    
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .command-center-container { grid-template-columns: 1fr; gap: 40px; }
+    
+    /* Mockup constraints */
+    .hero-visual-dark { height: auto; min-height: 400px; padding: 20px 0; }
+    .dashboard-mockup { width: 100%; height: auto; aspect-ratio: 16/9; }
 }
 
 @media (max-width: 768px) {
+    /* Mobile text and layout scaling */
+    .section-container-dark { padding: 60px 20px; }
+    .hero-container-dark { padding: 0 20px; padding-top: 20px; }
+    .nav-container { padding: 0 20px; }
+    
+    .hero-subtitle-dark { font-size: 1rem; }
+    .section-title-dark { font-size: 1.8rem; }
+    .section-header-dark { margin-bottom: 40px; }
+    
+    /* Hero button stacking */
+    .cta-group { flex-direction: column; width: 100%; gap: 15px; }
+    .cta-group .btn { width: 100%; display: block; box-sizing: border-box; text-align: center; }
+    
+    /* Grids to 1 column */
     .features-grid-dark { grid-template-columns: 1fr; }
-    .footer-container { grid-template-columns: 1fr; }
+    .footer-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    
+    .tech-content { grid-template-columns: 1fr; gap: 30px; }
+    
+    /* Form overrides */
+    .form-group input, .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Visual constraints */
+    .hero-visual-dark { min-height: 300px; margin-top: 20px; }
+    .glass-card-dark { padding: 20px; }
+    .glass-pill-dark { padding: 8px 14px; font-size: 0.8rem; }
+    
+    .floating-cards-dark .float-1,
+    .floating-cards-dark .float-2,
+    .floating-cards-dark .float-3 {
+        animation: none; /* Disable heavy floating animation on mobile */
+        transform: none;
+    }
+    .floating-cards-dark .float-1 { top: 5%; left: 0; }
+    .floating-cards-dark .float-2 { bottom: 5%; right: 0; }
+    .floating-cards-dark .float-3 { bottom: 40%; right: 5%; }
 }
